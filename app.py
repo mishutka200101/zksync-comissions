@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 
 def fetch_data():
-    client = MongoClient()
+    client = MongoClient(st.secrets["db_url"])
     db = client["zksync"]
     collection = db["txs-prices"]
 
